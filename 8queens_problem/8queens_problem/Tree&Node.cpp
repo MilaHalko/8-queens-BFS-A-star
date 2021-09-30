@@ -1,7 +1,7 @@
 #include "Tree&Node.hpp"
 
 void Node::AddBoard(Board board) {
-    boards.pushback(board);
+    boards.push_back(board);
 }
 
 Tree::Tree(Board board) {
@@ -21,19 +21,19 @@ void Tree::addChild(Node *current) {
 void Tree::GenerateBoards(Node *current) {
     for ( auto board: current->boards) {
         Board subBoard;
-        for (auto row: board) {
-            for (auto column: board) {
-                subBoard.squares[row][column] = column;
+        for (int row = 0; row < boardSize; row++) {
+            for (int column = 0; column < boardSize; column++) {
+                subBoard.squares[row][column] = board.squares[row][column];
             }
         }
         for (int i = 0; i < boardSize; i++) {
             for (int j = 0; j < boardSize; j++) {
-                if (board[i][j] == 1) {
+                if (board.squares[i][j] == 1) {
                     subBoard.squares[i][j] = 0;
                     for (int row = 0; row < boardSize; row++) {
                         if (row != i) {
                             subBoard.squares[row][j] = 1;
-                            current->child->boards.pushback(subBoard);
+                            current->child->boards.push_back(subBoard);
                             subBoard.squares[row][j] = 0;
                         }
                     }
