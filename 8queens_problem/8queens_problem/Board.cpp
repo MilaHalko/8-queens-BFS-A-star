@@ -26,17 +26,21 @@ void Board::GetFirstState(string file) {
 
 //STATE_CHECKING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 bool Board::GoodState() {
+    Output();
     for (int row = 0; row < boardSize; row++) {
         for (int column = 0; column < boardSize; column++) {
             if (squares[row][column] == 1) {
-                for (int i = column + 1; i < boardSize; i++) {
-                    if (squares[row][i] == 1) {return false;}
+                for (int j = row + 1; j < boardSize; j++) {
+                    if (squares[j][column] == 1) {
+                        return false;}
                     
-                    int diagonalUp = row + column - i;
-                    int diagonalDown = row + i - column;
+                    int diagonalLeft = column + row - j;
+                    int diagonalRight = column + j - row;
                     
-                    if (diagonalUp >= 0 && squares[diagonalUp][i] == 1) { return false;}
-                    if (diagonalDown < boardSize && squares[diagonalDown][i] == 1) {return false;}
+                    if (diagonalLeft >= 0 && squares[j][diagonalLeft] == 1) {
+                        return false;}
+                    if (diagonalRight < boardSize && squares[j][diagonalRight] == 1) {
+                        return false;}
                 }
             }
         }
@@ -52,4 +56,5 @@ void Board::Output() {
         }
         cout << endl;
     }
+    cout << endl;
 };

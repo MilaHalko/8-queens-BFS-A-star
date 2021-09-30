@@ -1,6 +1,6 @@
-#include "BFS.hpp"
+#include "AStar.hpp"
 
-bool BFS(Board board) {
+bool AStar(Board board) {
     Tree tree(board);
     Node *current = tree.root;
     tree.GenerateBoards(current);

@@ -1,4 +1,4 @@
 #pragma once
-#include "Tree&Node.hpp"
+#include "Tree&Tree&Node_BFS.hpp"
 
 bool BFS(Board);

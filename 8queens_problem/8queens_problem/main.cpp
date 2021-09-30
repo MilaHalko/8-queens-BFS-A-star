@@ -7,7 +7,7 @@ int main() {
     board.Output();
     if (!board.GoodState()) {
         BFS(board);
-        //AStar(board);
+        AStar(board);
     }
     else {
         cout << "true" << endl;

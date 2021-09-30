@@ -1,6 +1,5 @@
 #pragma once
 #include "libraries.hpp"
-#include "Tree&Node.hpp"
 
 class Board {
     vector<vector<int>> squares;
