@@ -26,7 +26,6 @@ void Board::GetFirstState(string file) {
 
 //STATE_CHECKING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 bool Board::GoodState() {
-    Output();
     for (int row = 0; row < boardSize; row++) {
         for (int column = 0; column < boardSize; column++) {
             if (squares[row][column] == 1) {
@@ -50,9 +49,9 @@ bool Board::GoodState() {
 
 //OUTPUT~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void Board::Output() {
-    for (auto row: squares) {
-        for (auto cell: row) {
-            cout << cell << " ";
+    for (int column = 0; column < boardSize; column++) {
+        for (int row = 0; row < boardSize; row++) {
+            cout << squares[row][column] << " ";
         }
         cout << endl;
     }

@@ -10,5 +10,5 @@ public:
     void Output();
     ~Board();
     
-    friend class Tree;
+    friend class Node;
 };

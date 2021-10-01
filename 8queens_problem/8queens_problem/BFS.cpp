@@ -1,26 +1,20 @@
 #include "BFS.hpp"
 
 bool BFS(Board board) {
-    Tree tree(board);
-    Node *current = tree.root;
-    tree.GenerateBoards(current);
-    if (tree.checkChildren(current)) {return true;}
+    Node *current = new Node(board);
+    queue<Node*> nodes;
+    nodes.push(current);
+    
     do {
-        current = current->children;
-        do {
-            tree.GenerateBoards(current);
-            if(tree.checkChildren(current)) {
-                return true;
-            }
-            if (current->next) {
-                current = current->next;
-            }
-            else {
-                break;
-            }
-        } while (current);
-        current = current->parent->children;
-        tree.upgradeRoot(current);
-    } while (current->children);
+        current = nodes.front();
+        current->board.Output();
+        nodes.pop();
+        if(current->board.GoodState()) {
+            current->board.Output();
+            return true;
+        }
+        current->generateChildren(nodes);
+        
+    } while (!nodes.empty());
     return false;
 }

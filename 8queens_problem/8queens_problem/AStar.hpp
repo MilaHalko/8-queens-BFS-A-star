@@ -1,4 +1,4 @@
 #pragma once
 
 
-bool AStar(Board);
+//bool AStar(Board);

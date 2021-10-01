@@ -1,6 +1,7 @@
 #include "AStar.hpp"
 
-bool AStar(Board board) {
+/*
+ bool AStar(Board board) {
     Tree tree(board);
     Node *current = tree.root;
     tree.GenerateBoards(current);
@@ -24,3 +25,4 @@ bool AStar(Board board) {
     } while (current->children);
     return false;
 }
+*/
