@@ -1,10 +1,9 @@
 #pragma once
 #include "Board.hpp"
-struct Node {
+class Node {
     Board board;
-    
     Node(Board board) {
         this->board = board;
     }
-    void generateChildren(queue<Node*>&);
+    friend class Algorithm;
 };

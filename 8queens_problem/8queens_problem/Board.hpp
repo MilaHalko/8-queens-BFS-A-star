@@ -8,7 +8,8 @@ public:
     void GetFirstState(string);
     bool GoodState();
     void Output();
+    int GetF2();
     ~Board();
     
-    friend class Node;
+    friend class Algorithm;
 };

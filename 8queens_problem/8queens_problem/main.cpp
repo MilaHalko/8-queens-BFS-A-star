@@ -1,4 +1,4 @@
-#include "BFS.hpp"
+#include "Algorithm.hpp"
 
 
 int main() {
@@ -6,8 +6,8 @@ int main() {
     board.GetFirstState("board.txt");
     
     if (!board.GoodState()) {
-        BFS(board);
-        //AStar(board);
+        Algorithm algorithm;
+        algorithm.startAlgo(board);
     }
     else {
         cout << "true" << endl;

@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <queue>
+#include <time.h>
 using namespace std;
 
 const int boardSize = 8;

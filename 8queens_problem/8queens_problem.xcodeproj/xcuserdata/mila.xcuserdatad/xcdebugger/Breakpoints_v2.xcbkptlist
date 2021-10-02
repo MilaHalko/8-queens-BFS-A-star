@@ -167,70 +167,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "877FEA86-6BFE-459D-AD51-B0F1782D8D5B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "8queens_problem/Board.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "Board::Output()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "35B4DCC9-1702-407F-8C43-14D2E160C9FE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "8queens_problem/Board.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "Board::Output()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "35B4DCC9-1702-407F-8C43-14D2E160C9FE - 98787014ac4199f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Board::Output()"
-                  moduleName = "8queens_problem"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mila/Documents/Progs/Algorithms/Algorithm-projection/8queens_problem/8queens_problem/Board.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "35B4DCC9-1702-407F-8C43-14D2E160C9FE - 98787014ac4199f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Board::Output()"
-                  moduleName = "8queens_problem"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mila/Documents/Progs/Algorithms/Algorithm-projection/8queens_problem/8queens_problem/Board.cpp"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D4A4C1EF-55C7-4306-A4C4-F6CD781F664E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -503,38 +439,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "513F01C5-0743-48DF-ACE7-C82FFEC6998C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "8queens_problem/Board.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "Board::GoodState()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "16C7367F-F442-4AB7-B76A-5DA5904B941B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "8queens_problem/Board.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "Board::GoodState()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "EDCC69DE-4704-4689-8378-40BBAA0AC766"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -542,8 +446,8 @@
             filePath = "8queens_problem/Board.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "Board::GoodState()"
             landmarkType = "7">
          </BreakpointContent>
@@ -590,9 +494,9 @@
             filePath = "8queens_problem/Node_BFS.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "4"
-            endingLineNumber = "4"
-            landmarkName = "Node::generateChildren(nodes)"
+            startingLineNumber = "3"
+            endingLineNumber = "3"
+            landmarkName = "Node::generateChildrenBFS(nodes)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -622,9 +526,9 @@
             filePath = "8queens_problem/Node_BFS.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "Node::generateChildren(nodes)"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "Node::generateChildrenBFS(nodes)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -638,9 +542,9 @@
             filePath = "8queens_problem/Node_BFS.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "5"
-            endingLineNumber = "5"
-            landmarkName = "Node::generateChildren(nodes)"
+            startingLineNumber = "4"
+            endingLineNumber = "4"
+            landmarkName = "Node::generateChildrenBFS(nodes)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -654,9 +558,9 @@
             filePath = "8queens_problem/Node_BFS.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "Node::generateChildren(nodes)"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "Node::generateChildrenBFS(nodes)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
