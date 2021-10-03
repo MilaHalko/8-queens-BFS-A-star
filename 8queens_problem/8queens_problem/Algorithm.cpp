@@ -22,8 +22,12 @@ void Algorithm::startAlgo(Board board) {
 bool Algorithm::BFS(Board board) {
     Node *current = new Node(board);
     statesNumBFS++;
+    
     queue<Node*> nodes;
     nodes.push(current);
+    
+    set<Node*> visited;
+    visited.insert(current);
     
     do {
         current = nodes.front();
@@ -31,18 +35,18 @@ bool Algorithm::BFS(Board board) {
         iterationBFS++;
         if(current->board.GoodState()) {
             current->board.Output();
-            cout << "Iteration: " << iterationBFS << endl;
-            cout << "All state's number: " << statesNumBFS << endl;
+            cout << "Iterations: " << iterationBFS << endl;
+            cout << "All states' number: " << statesNumBFS << endl;
             cout << "States in queue (finally): " << nodes.size() << endl;
             return true;
         }
-        generateChildrenBFS(nodes, current);
+        generateChildrenBFS(nodes, current, visited);
         
     } while (!nodes.empty());
     return false;
 }
 
-void Algorithm::generateChildrenBFS(queue<Node*> &nodes, Node* node) {
+void Algorithm::generateChildrenBFS(queue<Node*> &nodes, Node* node, set<Node*> &visited) {
     Board subBoard;
     for (int row = 0; row < boardSize; row++) {
         for (int column = 0; column < boardSize; column++) {
@@ -51,15 +55,18 @@ void Algorithm::generateChildrenBFS(queue<Node*> &nodes, Node* node) {
     }
     for (int row = 0; row < boardSize; row++) {
         for (int column = 0; column < boardSize; column++) {
+            
             if (node->board.squares[row][column] == 1) {
-                
                 subBoard.squares[row][column] = 0;
+                
                 for (int subColumn = 0; subColumn < boardSize; subColumn++) {
                     if (subColumn != column) {
                         subBoard.squares[row][subColumn] = 1;
                         Node *child = new Node(subBoard);
-                        statesNumBFS++;
-                        nodes.push(child);
+                        if (visited.find(child) == visited.end()) {
+                            statesNumBFS++;
+                            nodes.push(child);
+                        }
                         subBoard.squares[row][subColumn] = 0;
                     }
                 }
@@ -76,29 +83,32 @@ bool operator<(const pair<int, Board> &board1, const pair<int, Board> &board2) {
 
 bool Algorithm::AStar(Board board) {
     Node *current = new Node(board);
-    statesNumAStar;
+    statesNumAStar++;
     pr_queue nodes;
     int f2 = board.GetF2();
     nodes.push(make_pair(f2, current));
+    set<Node*> visited;
     
     do {
         current = nodes.top().second;
         nodes.pop();
+        visited.insert(current);
+        
         iterationAStar++;
         if(current->board.GoodState()) {
             current->board.Output();
-            cout << "Iteration: " << iterationAStar << endl;
-            cout << "All state's number: " << statesNumAStar << endl;
+            cout << "Iterations: " << iterationAStar << endl;
+            cout << "All states' number: " << statesNumAStar << endl;
             cout << "States in queue (finally): " << nodes.size() << endl;
             return true;
         }
-        generateChildrenAStar(nodes, current);
+        generateChildrenAStar(nodes, current, visited);
         
     } while (!nodes.empty());
     return false;
 }
 
-void Algorithm::generateChildrenAStar(pr_queue &nodes, Node *current) {
+void Algorithm::generateChildrenAStar(pr_queue &nodes, Node *current, set<Node*> &visited) {
     Board subBoard;
     for (int row = 0; row < boardSize; row++) {
         for (int column = 0; column < boardSize; column++) {
@@ -115,9 +125,11 @@ void Algorithm::generateChildrenAStar(pr_queue &nodes, Node *current) {
                     if (subColumn != column) {
                         subBoard.squares[row][subColumn] = 1;
                         Node *child = new Node(subBoard);
-                        statesNumAStar++;
-                        int f2 = subBoard.GetF2();
-                        nodes.push(make_pair(f2, child));
+                        if (visited.find(child) == visited.end()) {
+                            statesNumAStar++;
+                            int f2 = subBoard.GetF2();
+                            nodes.push(make_pair(f2, child));
+                        }
                         subBoard.squares[row][subColumn] = 0;
                     }
                 }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2189BE122703D64F00C221B1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2189BE112703D64F00C221B1 /* main.cpp */; };
 		2189BE1F2703DF0600C221B1 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2189BE1D2703DF0600C221B1 /* Board.cpp */; };
-		2189BE282705F29B00C221B1 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2189BE262705F29B00C221B1 /* Node.cpp */; };
 		2189BE372708EBA900C221B1 /* Algorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2189BE352708EBA900C221B1 /* Algorithm.cpp */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		2189BE1A2703D69A00C221B1 /* libraries.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = libraries.hpp; sourceTree = "<group>"; };
 		2189BE1D2703DF0600C221B1 /* Board.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		2189BE1E2703DF0600C221B1 /* Board.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Board.hpp; sourceTree = "<group>"; };
-		2189BE262705F29B00C221B1 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 		2189BE272705F29B00C221B1 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		2189BE352708EBA900C221B1 /* Algorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Algorithm.cpp; sourceTree = "<group>"; };
 		2189BE362708EBA900C221B1 /* Algorithm.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Algorithm.hpp; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 				2189BE362708EBA900C221B1 /* Algorithm.hpp */,
 				2189BE352708EBA900C221B1 /* Algorithm.cpp */,
 				2189BE272705F29B00C221B1 /* Node.hpp */,
-				2189BE262705F29B00C221B1 /* Node.cpp */,
 				2189BE1E2703DF0600C221B1 /* Board.hpp */,
 				2189BE1D2703DF0600C221B1 /* Board.cpp */,
 				2189BE1A2703D69A00C221B1 /* libraries.hpp */,
@@ -137,7 +134,6 @@
 			files = (
 				2189BE372708EBA900C221B1 /* Algorithm.cpp in Sources */,
 				2189BE1F2703DF0600C221B1 /* Board.cpp in Sources */,
-				2189BE282705F29B00C221B1 /* Node.cpp in Sources */,
 				2189BE122703D64F00C221B1 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

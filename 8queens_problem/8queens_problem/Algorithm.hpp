@@ -11,8 +11,8 @@ class Algorithm {
     bool BFS(Board);
     bool AStar(Board);
 
-    void generateChildrenBFS(queue<Node*>&, Node*);
-    void generateChildrenAStar(pr_queue&, Node*);
+    void generateChildrenBFS(queue<Node*>&, Node*, set<Node*>&);
+    void generateChildrenAStar(pr_queue&, Node*, set<Node*>&);
     
 public:
     Algorithm(): statesNumBFS(0), statesNumAStar(0), iterationBFS(0), iterationAStar(0) {}

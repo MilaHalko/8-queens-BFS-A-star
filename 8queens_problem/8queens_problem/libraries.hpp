@@ -6,6 +6,7 @@
 #include <string>
 #include <queue>
 #include <time.h>
+#include <set>
 using namespace std;
 
 const int boardSize = 8;
